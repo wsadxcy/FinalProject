@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour {
     public Text GameOverLabel;
     public Text FinalScoreLabel;
     public Text VictoryLabel;
+    public Image MiniMap;
 
 
     [Header("Sound")]
@@ -77,9 +78,10 @@ public class GameController : MonoBehaviour {
 
         this.GameOverLabel.gameObject.SetActive(false);
         this.FinalScoreLabel.gameObject.SetActive(false);
-        this.VictoryLabel.gameObject.SetActive(false);
         this.LivesLabel.gameObject.SetActive(false);
         this.ScoreLabel.gameObject.SetActive(false);
+        this.MiniMap.gameObject.SetActive(false);
+
 
 
         this._endGameSound = this.GetComponent<AudioSource>();
@@ -87,9 +89,13 @@ public class GameController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        
+        ToggleMap();
     }
 
+    void FixedUpdate()
+    {
+        
+    }
 
     private void _endGame()
     {
@@ -109,5 +115,20 @@ public class GameController : MonoBehaviour {
         this.FinalScoreLabel.gameObject.SetActive(true);
         this.ScoreLabel.gameObject.SetActive(false);
         this.LivesLabel.gameObject.SetActive(false);
+    }
+
+    public void ToggleMap()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            if (this.MiniMap.gameObject.activeInHierarchy == false)
+            {
+                this.MiniMap.gameObject.SetActive(true);
+            }
+            else
+            {
+                this.MiniMap.gameObject.SetActive(false);
+            }
+        }
     }
 }
