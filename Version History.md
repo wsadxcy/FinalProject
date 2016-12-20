@@ -1,0 +1,21 @@
+# FinalProject
+Version 0.1 - Created the first Scene with first person character
+Version 0.2 - Funished the First Level
+Version 0.3 - added a scoreing system and enemy
+Version 0.4 - Combine the first level with another two levels
+Version 0.5 - Added a secondary weapon to the player
+Version 0.6 - Added Toggleable minimap
+Version 0.7 - Added toggleable flashlight
+Version 0.8 - Added camera zoom
+Version 0.9 - Added pick up item to the first level
+Version 0.10 - Added working Player Health
+Version 0.11 - Rewrite the pickup spawn script
+Version 0.12 - Scrap the pickup spawn script and hand place everything to level 1
+Version 0.13 - Change the third level Spawn script to a boss fight
+Version 0.14 - Added keycard for pick up and finish the level
+Version 0.15 - Added final boss
+Version 0.16 - Added gameover scene
+Version 0.17 - Added A end game scene
+Version 0.18 - Change the gameover scene to be timed
+Version 0.19 - Change the UI color
+Version 1.0 - Initial release Version
